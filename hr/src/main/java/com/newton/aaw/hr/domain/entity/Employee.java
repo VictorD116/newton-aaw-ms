@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import org.springframework.data.annotation.Id;
 import com.newton.aaw.hr.api.EmployeeDto;
+import com.newton.aaw.hr.domain.enums.Gender;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,18 +19,19 @@ import lombok.Setter;
 
 public class Employee {
 	
+	private String id;
+	
 	private String firstName;
 	
 	private String lastName;
 	
-	private LocalDate dateOfBirth;
+	private LocalDateTime dateOfBirth;
 	
-	private enum gender{
-		M(1), F(2)
-	};
-	private LocalDate startDate;
+	private Gender gender;
 	
-	private LocalDate endDate;
+	private LocalDateTime startDate;
+	
+	private LocalDateTime endDate;
 	
 	private String position;
 	
@@ -38,7 +40,11 @@ public class Employee {
 	private Float hourSalary;
 	
 	private String area;
+
+	private LocalDateTime createdAt;
 	
+	private LocalDateTime modifiedAt;
+
 	
 	public Employee (EmployeeDto employeeDto) {
 		this.id = employeeDto.getId();

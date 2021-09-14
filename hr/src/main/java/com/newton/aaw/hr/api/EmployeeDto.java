@@ -1,6 +1,8 @@
 package com.newton.aaw.hr.api;
 import java.time.LocalDateTime;
 
+import com.newton.aaw.hr.domain.enums.Gender;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +15,7 @@ import lombok.Setter;
 
 public class EmployeeDto {
 	
-	private Integer id;
+	private String id;
 	
 	private String firstName;
 	
@@ -21,9 +23,7 @@ public class EmployeeDto {
 	
 	private LocalDateTime dateOfBirth;
 	
-	private enum gender {
-        Masculino, Feminino
-    }; 
+	private Gender gender;
     
     private LocalDateTime startDate;
     

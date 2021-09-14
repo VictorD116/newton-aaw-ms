@@ -7,6 +7,7 @@ import com.newton.aaw.hr.domain.entity.Employee;
 
 public interface EmployeeRepository  extends MongoRepository<Employee, String>{
 
+
 }
 
 
