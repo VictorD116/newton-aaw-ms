@@ -1,6 +1,7 @@
 package com.newton.aaw.hr.api;
 import java.time.LocalDateTime;
 
+import com.newton.aaw.hr.domain.entity.Employee;
 import com.newton.aaw.hr.domain.enums.Gender;
 
 import lombok.AllArgsConstructor;
@@ -41,18 +42,17 @@ public class EmployeeDto {
     
     //construtor entidade para dpt
     
-    public EmployeeDto(EmployeeDto empoyeeDto) {
-    	this.id = empoyeeDto.getId();
-    	this.firstName = empoyeeDto.getFirstName();
-    	this.lastName = empoyeeDto.getLastName();
-    	this.dateOfBirth = empoyeeDto.getDateOfBirth();
-    	this.gender = empoyeeDto.getGender();
-    	this.startDate = empoyeeDto.getStartDate();
-    	this.endDate = empoyeeDto.getEndDate();
-    	this.position = empoyeeDto.getPosition();
-    	this.monthlySalary = empoyeeDto.getMonthlySalary();
-    	this.hourSalary = empoyeeDto.getHourSalary();
-    	this.area = empoyeeDto.getArea();
+    public EmployeeDto(Employee emp) {
+    	this.firstName = emp.getFirstName();
+    	this.lastName = emp.getLastName();
+    	this.dateOfBirth = emp.getDateOfBirth();
+    	this.gender = emp.getGender();
+    	this.startDate = emp.getStartDate();
+    	this.endDate = emp.getEndDate();
+    	this.position = emp.getPosition();
+    	this.monthlySalary = emp.getMonthlySalary();
+    	this.hourSalary = emp.getHourSalary();
+    	this.area = emp.getArea();
     	
     }
 }

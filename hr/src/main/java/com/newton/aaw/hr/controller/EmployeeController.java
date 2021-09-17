@@ -47,16 +47,16 @@ public class EmployeeController {
 		return employeeDtos;
  	}
 	@PostMapping("/employees")
-	public EmployeeDto create(@RequestBody EmployeeDto u) {
-		var employee = new Employee(u);
+	public EmployeeDto create(@RequestBody EmployeeDto emp) {
+		var employee = new Employee(emp);
 		
 		employee = employeeService.create(employee);
 		
 		return new EmployeeDto(employee);
 	}
 	@PutMapping ("/employees{id}")
-	public EmployeeDto update(@PathVariable String id, @RequestBody EmployeeDto U) {
-		var employee = new Employee(u);
+	public EmployeeDto update(@PathVariable String id, @RequestBody EmployeeDto emp) {
+		var employee = new Employee(emp);
 		
 		employee = employeeService.update(id, employee);
 		

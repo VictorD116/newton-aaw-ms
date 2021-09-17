@@ -24,31 +24,31 @@ public class EmployeeService {
 	}
 	
 	//C - CRUD 
-	public Employee create (Employee u) {
-		u.setCreatedAt(LocalDateTime.now());
-		u.setModifiedAt(LocalDateTime.now());
+	public Employee create (Employee emp) {
+		emp.setCreatedAt(LocalDateTime.now());
+		emp.setModifiedAt(LocalDateTime.now());
 		
-		employeeRepository.save(u);
-		return u;
+		employeeRepository.save(emp);
+		return emp;
 	}
 	
 	//u - CRUD 
-	public Employee update(String id, Employee u) {
+	public Employee update(String id, Employee emp) {
 		
 		//recuperar para validar se existe
 		Employee existing =get(id);
 		
 		//update
-		existing.setFirstName(u.getFirstName());
-		existing.setLastName(u.getFirstName());
-		existing.setDateOfBirth(u.getDateOfBirth());
-		existing.setGender(u.getGender());
-		existing.setStartDate(u.getStartDate());
-		existing.setEndDate(u.getEndDate());
-		existing.setPosition(u.getPosition());
-		existing.setMonthlySalary(u.getMonthlySalary());
-		existing.setHourSalary(u.getHourSalary());
-		existing.setArea(u.getArea());
+		existing.setFirstName(emp.getFirstName());
+		existing.setLastName(emp.getFirstName());
+		existing.setDateOfBirth(emp.getDateOfBirth());
+		existing.setGender(emp.getGender());
+		existing.setStartDate(emp.getStartDate());
+		existing.setEndDate(emp.getEndDate());
+		existing.setPosition(emp.getPosition());
+		existing.setMonthlySalary(emp.getMonthlySalary());
+		existing.setHourSalary(emp.getHourSalary());
+		existing.setArea(emp.getArea());
 		
 		employeeRepository.save(existing);
 		return existing;
